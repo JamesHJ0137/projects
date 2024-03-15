@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜딩페이지</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Montserrat;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        vertical-align: top;
+      }
+      .con {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f9f9f9;
+      }
+      .con h2 {
+        font-size: 30px;
+      }
+      header {
+        background: #19191c;
+        padding: 20px 30px;
+        color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 60px;
+        width: 90%;
+        z-index: 10;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      header nav ul {
+        display: flex;
+      }
+      header nav ul li {
+        margin-left: 50px;
+        font-weight: bold;
+      }
+      #about {
+        position: relative;
+        overflow: hidden;
+      }
+      #about iframe {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+      }
+      #about h2 {
+        font-size: 80px;
+        position: relative;
+      }
+      #about h2::before {
+        content: "";
+        position: absolute;
+        width: 21.8px;
+        height: 8px;
+        background: #b26cd8;
+        left: 13.35%;
+        top: 5px;
+        transform: translateX(-5px);
+        opacity: 0;
+        animation: ani1 1s linear 1s both infinite;
+      }
+      #pro1 {
+        background: url(https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg)
+          center/cover;
+        background-attachment: fixed;
+      }
+      #pro2 {
+        background: url(https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg)
+          center/cover;
+        background-attachment: fixed;
+      }
+      #pro3 {
+        background: url(https://cdn.pixabay.com/photo/2016/11/29/02/20/astronomy-1866822_1280.jpg)
+          center/cover;
+        background-attachment: fixed;
+      }
+      /*애니메이션 동작*/
+      @keyframes ani1 {
+        0% {
+          width: 0;
+          opacity: 0;
+        }
+        100% {
+          width: 21.8px;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1><i class="xi-command xi-spin"></i> Mini Portfolio</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about">About</a>
+              <a href="#pro1">Project1</a>
+              <a href="#pro2">Project2</a>
+              <a href="#pro3">Project3</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="about" class="con">
+        <h2>이하준의 포트폴리오</h2>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/VTsGRGeBj98?autoplay=1&mute=1&controls=0&disablekb=1&modestbranding=1&showinfo=0&loop=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="fullscreen; encrypted-media"
+          allowfullscreen
+          style="pointer-events: none"
+        ></iframe>
+      </div>
+      <div id="pro1" class="con">
+        <h2>Project1</h2>
+      </div>
+      <div id="pro2" class="con">
+        <h2>Project2</h2>
+      </div>
+      <div id="pro3" class="con">
+        <h2>Project3</h2>
+      </div>
+    </div>
+  </body>
+</html>
